@@ -1,0 +1,95 @@
+{
+  "network": "GenLayer Studionet",
+  "rpc_url": "https://studio.genlayer.com/api",
+  "chain_id": 61999,
+  "contract_address": "0xBe0BeaBE22e12Fc7C218026002d930A73cB7Dc43",
+  "deploy_tx_hash": "0x162450ca25394b22b4bf02600c6c05bbc1a2671a9482b9fbdb40130e2ea5771f",
+  "contract_file": "contracts/patent_prior_art_oracle.py",
+  "contract_lf_sha256": "c28f16d17cb4a2420d7f17da0d98a3c467fb2078fd1cbbc61019b1add422f760",
+  "alice_address": "0x154a452b0755EE812014C1405B15D905BA06f9c7",
+  "bob_address": "0x1A2C7dF16f7800d0493959461edE7bEff385b7cd",
+  "transactions": [
+    {
+      "step": "Deploy PatentPriorArtOracle",
+      "tx_hash": "0x162450ca25394b22b4bf02600c6c05bbc1a2671a9482b9fbdb40130e2ea5771f",
+      "status": "FINALIZED",
+      "contract_address": "0xBe0BeaBE22e12Fc7C218026002d930A73cB7Dc43"
+    },
+    {
+      "step": "Soft-fail payable refund test",
+      "tx_hash": "0x1f10d5a6d766751fe47b497c50cf0822987630eda73d5b0ec8491d1538c14253",
+      "status": "FINALIZED",
+      "refundable_balance_credited_wei": 100
+    },
+    {
+      "step": "EOA withdrawal delivery test",
+      "tx_hash": "0x452567215f94568ed19673f6ceac4658cc684dac7d70d94588607265afc7d3a7",
+      "status": "FINALIZED",
+      "refundable_balance_remaining_wei": 0
+    },
+    {
+      "step": "Patent claim registration",
+      "tx_hash": "0x2f9f2f9977ac305f41a0f751eaff79c7f8e146ec233cceb79c6599630f8768ed",
+      "status": "FINALIZED",
+      "claim_id": 1,
+      "claim_title": "Decentralized Zero-Knowledge Patent Claim Integrity System",
+      "status_after": "REGISTERED"
+    },
+    {
+      "step": "Prior-art challenge submission",
+      "tx_hash": "0x61ec45a767ff7777293dc1524aab98c6b87505f4db9826913de5105d245d44d4",
+      "status": "FINALIZED",
+      "challenger": "0x1A2C7dF16f7800d0493959461edE7bEff385b7cd",
+      "status_after": "REGISTERED"
+    },
+    {
+      "step": "Adjudicate patent novelty consensus",
+      "tx_hash": "0xeb936c92940236fe352849a6fd00892447eda966c2e6d4bc55c459db0f890cf7",
+      "status": "FINALIZED",
+      "verdict": "EVIDENCE_UNAVAILABLE_FAIL_CLOSED",
+      "overlap_bps": 0,
+      "sources_verified": false,
+      "votes": {
+        "0x1B490819e040562a5fb40CD64B1c70D4419c38d1": "idle",
+        "0x4eeaD269a60bB89c98a23c1BCd0bd101CafD90E0": "agree",
+        "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+        "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "idle",
+        "0x813890bC5bEDEB4F5437570962379F04738F18Cb": "agree"
+      }
+    }
+  ],
+  "final_claim_state": {
+    "adjudicated_at_timestamp": 1795171664,
+    "adjudication_deadline_timestamp": 1795344367,
+    "challenge_bond_wei": 0,
+    "challenge_deadline_timestamp": 1795171567,
+    "challenge_window_seconds": 30,
+    "challenged_at_timestamp": 0,
+    "challenger": "0x0000000000000000000000000000000000000000",
+    "challenger_payout_wei": 0,
+    "citation_notes": "",
+    "claim_fingerprint": "0x4a5b6c7d8e9f0123456789abcdef0123456789abcdef0123456789abcdef0123",
+    "claim_id": 1,
+    "claim_title": "Decentralized Zero-Knowledge Patent Claim Integrity System",
+    "filing_reference_url": "https://www.w3.org/Consortium/Patent-Policy-20200915/",
+    "has_challenger": false,
+    "inventor": "0x154a452b0755EE812014C1405B15D905BA06f9c7",
+    "inventor_payout_wei": 1000000000000000,
+    "novelty_bond_wei": 1000000000000000,
+    "novelty_verdict": "EVIDENCE_UNAVAILABLE_FAIL_CLOSED",
+    "overlap_bps": 0,
+    "prior_art_url": "",
+    "registered_at_timestamp": 1795171537,
+    "sources_verified": false,
+    "status": "ADJUDICATED"
+  },
+  "final_accounting_invariants": {
+    "active_challenge_bonds_wei": 0,
+    "active_claim_bonds_wei": 0,
+    "expected_sum_wei": 2000000000000000,
+    "is_conserved": true,
+    "native_custody_balance_wei": 2000000000000000,
+    "stranded_residue_wei": 0,
+    "total_refundable_balances_wei": 2000000000000000
+  }
+}

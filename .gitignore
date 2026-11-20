@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+evidence/_checkpoint.json
+node_modules/
+*.pyc
